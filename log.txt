@@ -1,0 +1,318 @@
+
+
+[46;30m =========================编译swan-app开始前的准备工作=========================== [0m
+
+
+[46;30m =========================swan-app编译中在本地文件发现swan-components, 使用本地的swan-components========================= [0m
+
+> @baidu/swan-components@3.60.1 preinstall /Users/mazongchao/Documents/Work/swan/swan-components
+> sh commit-msg-setting.sh
+
+audited 9438 packages in 7.429s
+found 17 vulnerabilities (5 low, 9 moderate, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+/usr/local/lib/node_modules/@baidu/swan-components -> /Users/mazongchao/Documents/Work/swan/swan-components
+/Users/mazongchao/Documents/Work/swan/swan-js-host-app/node_modules/@baidu/swan-components -> /usr/local/lib/node_modules/@baidu/swan-components -> /Users/mazongchao/Documents/Work/swan/swan-components
+
+
+[46;30m =========================swan-components已merge到swan-app========================= [0m
+
+
+[46;30m =========================编译swan-app开始前的准备工作已完成=========================== [0m
+
+
+[46;30m =========================开始编译本地模块../swan-js-api=========================== [0m
+
+
+[46;30m =========================开始编译本地模块../swan-js=========================== [0m
+
+
+[46;30m =========================开始编译本地模块../swan-components=========================== [0m
+
+> @baidu/swan-components@3.60.1 preinstall /Users/mazongchao/Documents/Work/swan/swan-components
+> sh commit-msg-setting.sh
+
+
+> @super-fe/swan-core@3.50.2 preinstall /Users/mazongchao/Documents/Work/swan/swan-js
+> sh commit-msg-setting.sh
+
+audited 7062 packages in 5.122s
+found 0 vulnerabilities
+
+
+> swan-js-api@1.0.0 build /Users/mazongchao/Documents/Work/swan/swan-js-api
+> node webpack.config.js NODE_ENV=production
+
+  adding: package.json (deflated 65%)
+  adding: removeScript.js (deflated 29%)
+
+============== build 已完成=============
+
+
+
+[46;30m =========================本地的../swan-js-api编译完成=========================== [0m
+up to date in 9.266s
+
+> @super-fe/swan-core@3.50.2 build /Users/mazongchao/Documents/Work/swan/swan-js
+> webpack --config webpack.prod.conf.js
+
+audited 9438 packages in 9.858s
+found 17 vulnerabilities (5 low, 9 moderate, 3 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+> @baidu/swan-components@3.60.1 build /Users/mazongchao/Documents/Work/swan/swan-components
+> webpack --config webpack/webpack.prod.conf.js
+
+Hash: 773585fe626440b0bb61
+Version: webpack 3.12.0
+Time: 4251ms
+                            Asset     Size  Chunks             Chunk Names
+                  master/index.js  96.3 kB       0  [emitted]  master
+                  slaves/index.js  98.2 kB       1  [emitted]  slaves
+          slaves/swan-template.js  3.56 kB          [emitted]  
+slaves/custom-element-template.js   1.9 kB          [emitted]  
+   [0] ./src/utils/index.js 18.6 kB {0} {1} [built]
+   [3] ./src/utils/events-emitter.js 7.3 kB {0} {1} [built]
+   [4] ./src/utils/path.js 1.48 kB {0} {1} [built]
+   [5] ./src/utils/module.js 3.8 kB {0} {1} [built]
+   [7] ./src/utils/communication/index.js 5.7 kB {0} {1} [built]
+  [11] ./src/utils/firstRenderHookQueue.js 1.86 kB {0} [built]
+  [12] ./src/extension/index.js 10.9 kB {0} {1} [built]
+  [23] ./src/master/index.js 20.2 kB {0} [built]
+  [26] ./src/master/navigator/index.js 16 kB {0} [built]
+  [31] ./src/master/custom-component/index.js 33.9 kB {0} [built]
+  [35] ./src/master/proccessors/api-proccessor.js 10.1 kB {0} [built]
+  [39] ./src/utils/prefetch/prefetch-request.js 2.49 kB {0} [built]
+  [40] ./src/slave/index.js 23.9 kB {1} [built]
+  [41] ./src/slave/component-factory/index.js 17.3 kB {1} [built]
+  [42] ./src/utils/platform.js 600 bytes {1} [built]
+    + 29 hidden modules
+  adding: master/ (stored 0%)
+  adding: master/index.js (deflated 76%)
+  adding: slaves/ (stored 0%)
+  adding: slaves/custom-element-template.js (deflated 60%)
+  adding: slaves/swan-template.js (deflated 61%)
+  adding: slaves/index.js (deflated 70%)
+/Users/mazongchao/Documents/Work/swan/swan-js
+
+
+[46;30m =========================本地的../swan-js编译完成=========================== [0m
+Hash: 6fdfed864c587b233256
+Version: webpack 3.12.0
+Time: 9350ms
+           Asset     Size  Chunks                    Chunk Names
+        index.js   325 kB       0  [emitted]  [big]  index
+master-inject.js  37.4 kB       1  [emitted]         master-inject
+styles_index.css   154 kB       0  [emitted]         index
+  [16] ./src/utils/animation.js 12.5 kB {0} {1} [built]
+  [18] ./src/swan-component/index.js 21.3 kB {0} [built]
+  [20] ./src/index.js 7.43 kB {0} [built]
+  [21] ./src/image/index.js 12.8 kB {0} [built]
+  [24] ./src/view/index.js 2.15 kB {0} [built]
+  [25] ./src/cover-view/index.js 7.07 kB {0} [built]
+  [27] ./src/cover-image/index.js 10.8 kB {0} [built]
+  [29] ./src/text/index.js 4.58 kB {0} [built]
+  [30] ./src/map/index.js 8.96 kB {0} [built]
+  [59] ./src/label/index.js 5.45 kB {0} [built]
+ [121] ./src/track-log/index.js 12.9 kB {0} [built]
+ [124] ./src/mask/index.js 665 bytes {0} [built]
+ [126] ./src/utils/abtest.js 677 bytes {0} [built]
+ [127] ./src/master-inject.js 2.47 kB {1} [built]
+ [128] ./src/utils/dom/swanXml/index.js 531 bytes {1} [built]
+    + 179 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/mask/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/mask/index.css 370 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/track-log/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/track-log/index.css 191 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/ad-fc/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/ad-fc/index.css 162 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/ad/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/ad/index.css 3.82 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/public/page.css:
+       [0] ./src/public/assets/fonts/font.eot?t=1530100060955 6.17 kB {0} [built]
+       [1] ./node_modules/css-loader?modules&localIdentName=[local]!./src/public/page.css 1.37 kB {0} [built]
+       [4] ./src/public/assets/fonts/font.woff?t=1530100060955 3.82 kB {0} [built]
+       [5] ./src/public/assets/fonts/font.ttf?t=1530100060955 5.92 kB {0} [built]
+       [6] ./src/public/assets/fonts/font.svg?t=1530100060955 12.7 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/ar-camera/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/ar-camera/index.css 346 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/animation-view/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/animation-view/index.css 377 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/open-data/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/open-data/index.css 942 bytes {0} [built]
+       [3] ./src/open-data/images/headImg.png 11.9 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/camera/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/camera/index.css 340 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/movable-area/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/movable-area/index.css 235 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/movable-view/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/movable-view/index.css 291 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/audio/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/audio/index.css 2.4 kB {0} [built]
+       [3] ./src/audio/images/pause.png 2.71 kB {0} [built]
+       [4] ./src/audio/images/playing.png 2.07 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/progress/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/progress/index.css 555 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/switch/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/switch/index.css 2.9 kB {0} [built]
+       [3] ./src/checkbox/font/weui.ttf 6.05 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/radio-group/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/radio-group/index.css 231 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/radio/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/radio/index.css 2.14 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/video-ios/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/video-ios/index.css 971 bytes {0} [built]
+       [3] ./src/video-ios/images/play.png 1.83 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/video/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/video/index.css 962 bytes {0} [built]
+       [3] ./src/video/images/play.png 1.83 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/live-player/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/live-player/index.css 824 bytes {0} [built]
+       [3] ./src/live-player/images/play.png 7.5 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/checkbox/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/checkbox/index.css 1.11 kB {0} [built]
+       [3] ./src/checkbox/image/checked.png 1.14 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/canvas/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/canvas/index.css 396 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/slider/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/slider/index.css 1.64 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/icon/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/icon/index.css 2.9 kB {0} [built]
+       [3] ./src/icon/images/loadingwhite.png 1.83 kB {0} [built]
+       [4] ./src/icon/images/loadinggrey.png 2.44 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/picker/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/picker/index.css 188 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/picker-view-column/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/picker-view-column/index.css 1.46 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/picker-view/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/picker-view/index.css 330 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/swiper-item/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/swiper-item/index.css 231 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/swiper/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/swiper/index.css 1.75 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/button/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/button/index.css 3.33 kB {0} [built]
+       [3] ./src/button/images/buttonloadgrey.png 2.44 kB {0} [built]
+       [4] ./src/button/images/buttonloadwhite.png 1.83 kB {0} [built]
+        + 2 hidden modules
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/textarea/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/textarea/index.css 637 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/input/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/input/index.css 1.2 kB {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/navigator/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/navigator/index.css 327 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/scroll-view/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/scroll-view/index.css 399 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/map/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/map/index.css 393 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/cover-image/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/cover-image/index.css 538 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/cover-view/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/cover-view/index.css 843 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?modules&localIdentName=[local]!src/image/index.css:
+       [0] ./node_modules/css-loader?modules&localIdentName=[local]!./src/image/index.css 434 bytes {0} [built]
+        + 1 hidden module
+Child extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/src/index.js??ref--2-3!node_modules/stylus-loader/index.js!src/video-android/index.styl:
+       [0] ./node_modules/css-loader??ref--2-2!./node_modules/postcss-loader/src??ref--2-3!./node_modules/stylus-loader!./src/video-android/index.styl 9.58 kB {0} [built]
+       [3] ./src/video-android/font/iconfont.woff 4.3 kB {0} [built]
+       [4] ./src/video-android/font/iconfont.ttf 7.8 kB {0} [built]
+       [5] ./src/video-android/font/iconfont.svg 33.8 kB {0} [built]
+        + 2 hidden modules
+  adding: index.js (deflated 76%)
+  adding: master-inject.js (deflated 75%)
+  adding: styles_index.css (deflated 59%)
+
+
+[46;30m =========================本地的../swan-components编译完成=========================== [0m
+
+
+[46;30m =========================开始正式编译swan-app=========================== [0m
+Hash: 6aa881adffea8beb9798
+Version: webpack 3.12.0
+Time: 17103ms
+                            Asset     Size  Chunks                    Chunk Names
+                  master/index.js   379 kB       0  [emitted]  [big]  master
+                  slaves/index.js   668 kB       1  [emitted]  [big]  slaves
+        promise-polyfill/index.js    20 kB       2  [emitted]         promise-polyfill
+                 runtime/index.js  5.34 kB       3  [emitted]         runtime
+                 monitor/index.js   5.8 kB       4  [emitted]         monitor
+               master/master.html  1.21 kB          [emitted]         
+               slaves/slaves.html  1.31 kB          [emitted]         
+slaves/custom-element-template.js   1.9 kB          [emitted]         
+          slaves/swan-template.js  3.56 kB          [emitted]         
+         slaves/styles_slaves.css   154 kB          [emitted]         
+ [104] ../swan-js-api/src/index.js 15.2 kB {0} {1} [built]
+ [234] multi core-js/modules/es7.array.includes core-js/modules/es6.array.find-index core-js/modules/es6.array.from core-js/modules/es6.array.find core-js/modules/es6.array.fill core-js/modules/es6.array.copy-within core-js/modules/es6.object.get-own-property-descriptor core-js/modules/es7.object.entries core-js/modules/es6.object.assign core-js/modules/es7.object.values core-js/modules/es6.math.asinh core-js/modules/es6.math.atanh core-js/modules/es6.math.cbrt core-js/modules/es6.math.expm1 core-js/modules/es6.math.clz32 core-js/modules/es6.math.cosh core-js/modules/es6.math.fround core-js/modules/es6.math.hypot core-js/modules/es6.math.log1p core-js/modules/es6.math.log2 core-js/modules/es6.math.log10 core-js/modules/es6.math.sign core-js/modules/es6.math.sinh core-js/modules/es6.math.tanh core-js/modules/es6.math.trunc core-js/modules/es6.string.from-code-point core-js/modules/es6.string.code-point-at core-js/modules/es6.string.starts-with core-js/modules/es6.string.ends-with core-js/modules/es6.string.includes core-js/modules/es6.string.repeat core-js/modules/es7.string.pad-start core-js/modules/es7.string.pad-end core-js/modules/es6.regexp.flags core-js/modules/es6.map core-js/modules/es6.weak-map core-js/modules/es6.set core-js/modules/es6.weak-set core-js/modules/es6.symbol core-js/modules/es6.reflect.apply core-js/modules/es6.reflect.construct core-js/modules/es6.reflect.define-property core-js/modules/es6.reflect.delete-property core-js/modules/es6.reflect.get core-js/modules/es6.reflect.get-own-property-descriptor core-js/modules/es6.reflect.get-prototype-of core-js/modules/es6.reflect.has core-js/modules/es6.reflect.is-extensible core-js/modules/es6.reflect.own-keys core-js/modules/es6.reflect.prevent-extensions core-js/modules/es6.reflect.set core-js/modules/es6.reflect.set-prototype-of core-js/modules/es7.promise.finally core-js/modules/es6.array.iterator ./src/master/index.js 676 bytes {0} [built]
+ [235] ./src/master/index.js 1.29 kB {0} [built]
+ [239] multi core-js/modules/es7.array.includes core-js/modules/es6.array.find-index core-js/modules/es6.array.from core-js/modules/es6.array.find core-js/modules/es6.array.fill core-js/modules/es6.array.copy-within core-js/modules/es6.object.get-own-property-descriptor core-js/modules/es7.object.entries core-js/modules/es6.object.assign core-js/modules/es7.object.values core-js/modules/es6.math.asinh core-js/modules/es6.math.atanh core-js/modules/es6.math.cbrt core-js/modules/es6.math.expm1 core-js/modules/es6.math.clz32 core-js/modules/es6.math.cosh core-js/modules/es6.math.fround core-js/modules/es6.math.hypot core-js/modules/es6.math.log1p core-js/modules/es6.math.log2 core-js/modules/es6.math.log10 core-js/modules/es6.math.sign core-js/modules/es6.math.sinh core-js/modules/es6.math.tanh core-js/modules/es6.math.trunc core-js/modules/es6.string.from-code-point core-js/modules/es6.string.code-point-at core-js/modules/es6.string.starts-with core-js/modules/es6.string.ends-with core-js/modules/es6.string.includes core-js/modules/es6.string.repeat core-js/modules/es7.string.pad-start core-js/modules/es7.string.pad-end core-js/modules/es6.regexp.flags core-js/modules/es6.map core-js/modules/es6.weak-map core-js/modules/es6.set core-js/modules/es6.weak-set core-js/modules/es6.symbol core-js/modules/es6.reflect.apply core-js/modules/es6.reflect.construct core-js/modules/es6.reflect.define-property core-js/modules/es6.reflect.delete-property core-js/modules/es6.reflect.get core-js/modules/es6.reflect.get-own-property-descriptor core-js/modules/es6.reflect.get-prototype-of core-js/modules/es6.reflect.has core-js/modules/es6.reflect.is-extensible core-js/modules/es6.reflect.own-keys core-js/modules/es6.reflect.prevent-extensions core-js/modules/es6.reflect.set core-js/modules/es6.reflect.set-prototype-of core-js/modules/es7.promise.finally core-js/modules/es6.array.iterator ./src/slaves/index.js 676 bytes {1} [built]
+ [240] ./src/slaves/index.js 1.11 kB {1} [built]
+ [244] ./src/monitor/index.js 13.9 kB {4} [built]
+ [245] ./src/runtime/index.js 469 bytes {3} [built]
+ [246] ./src/runtime/polyfill/index.js 163 bytes {3} [built]
+ [247] ./src/runtime/polyfill/atob.js 1.52 kB {3} [built]
+ [248] ./src/runtime/polyfill/btoa.js 926 bytes {3} [built]
+ [249] ./src/runtime/polyfill/image.js 2.22 kB {3} [built]
+ [250] ./src/runtime/polyfill/promise.js 413 bytes {3} [built]
+ [251] ./src/runtime/polyfill/timer.js 2.27 kB {3} [built]
+ [252] ./src/runtime/polyfill/console.js 513 bytes {3} [built]
+ [253] ./src/runtime/polyfill/global.js 1.03 kB {3} [built]
+    + 246 hidden modules
+
+
+[46;30m =========================正在生成pkginfo=========================== [0m
+
+
+[46;30m =========================开始zip swan-app=========================== [0m
+  adding: master/ (stored 0%)
+  adding: master/master.html (deflated 54%)
+  adding: master/index.js (deflated 76%)
+  adding: monitor/ (stored 0%)
+  adding: monitor/index.js (deflated 64%)
+  adding: promise-polyfill/ (stored 0%)
+  adding: promise-polyfill/index.js (deflated 65%)
+  adding: runtime/ (stored 0%)
+  adding: runtime/index.js (deflated 59%)
+  adding: slaves/ (stored 0%)
+  adding: slaves/custom-element-template.js (deflated 60%)
+  adding: slaves/swan-template.js (deflated 61%)
+  adding: slaves/index.js (deflated 75%)
+  adding: slaves/styles_slaves.css (deflated 59%)
+  adding: slaves/slaves.html (deflated 52%)
+
+
+[46;30m =========================swan-app编译完成=========================== [0m
