@@ -94,7 +94,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 </head>
 
 <body id="HTMLReporter" class="html-reporter">
-<h1>Tested in HeadlessChrome 0.0.0 (Mac OS X 10.13.4) on Wed Apr 17 2019</h1>
+<h1>Tested in HeadlessChrome 0.0.0 (Mac OS X 10.13.6) on Wed Jul 17 2019</h1>
 
 <div class="alert">
 
@@ -102,7 +102,7 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
 
   
   <span class="passingAlert bar"><span class="fold-buttons"><a href="#" onclick="fold();">Fold</a> | 
-  <a href="#" onclick="unfold();">Unfold</a></span>97 specs, 0 failed, 0 pending</span>
+  <a href="#" onclick="unfold();">Unfold</a></span>8 specs, 0 failed, 0 pending</span>
   
 
 
@@ -115,495 +115,18 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
   
   
     <div class="suite passed">
-      <span class="description">ExceptionMonitor stage isValid check</span>
+      <span class="description">v8 polyfill</span>
     
       <div class="specSummary passed">
-      <span class="description">should return true while the stage is invalid</span>
+      <span class="description">atob return expected value</span>
       </div>
     
       <div class="specSummary passed">
-      <span class="description">should return true while the stage is valid</span>
+      <span class="description">atob throw Error</span>
       </div>
     
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor</span>
-    
-      <div class="specSummary passed">
-      <span class="description">can find the stage lost event</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can find the stage rest event</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should ExceptionMonitor is a class</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor delayToSendExceptionStage</span>
-    
-      <div class="specSummary passed">
-      <span class="description">can delay to send exception stage if never sent</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can not send exception stage if sent</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor setUserTrack</span>
-    
-      <div class="specSummary passed">
-      <span class="description">can set user track while setUserTrack be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can reset user top track path while paths more than or equal 10</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor getAppInfo</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should return empty object while the method be called return false</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should return correct object while the method be called right</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor extendExtInfo</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should return extendExt info after extendExtInfo be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while some error happened</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor send</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should call log function after send function be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught when some error happened</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should Log is a class</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log registerLog</span>
-    
-      <div class="specSummary passed">
-      <span class="description">registerLog</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while TraceEvents cb params does not includes param</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should eventName be set to empty while it is undefined</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log executeStageEvent</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should execute master while the role is master</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should execute slave while the role is slave</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log reportMtjMiniSDK</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should initProductLogEvents while the event is masterPreloadContextDecorated</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should do nothing while the event is not masterPreloadContextDecorated</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log executeExceptionMointor</span>
-    
-      <div class="specSummary passed">
-      <span class="description">can set user track while the stage is masterActiveCreatePageFlowStart</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can upload first masterPreload stage exception while the stage belongs masterPreload</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can upload first slavePreload stage exception while the stage belongs slavePreload</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can upload first masterActive stage exception while the stage belongs masterActive</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">can upload first slaveActive stage exception while the stage belongs slaveActive</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log executePerformPanel</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while showPerformancePanel is not undefined</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should performPanelHelper be called while the event is slaveActiveRenderEnd</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should addPerformPanel be called while the event is pageSwitchStart or pageSwitchStart</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should addPerformPanel be called while the event is pageSwitchStart or pageSwitchStart</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should performPanelHelper be called while the event is pageDataUpdate</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should console error while the event does not belong to the performPanelEvents</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log master</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf log after masterPreloadEnd be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf log after masterLogicStart was called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterActiveStart was called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterActiveAppJsLoaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log, send stage log after masterActiveSendInitdataEnd be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterOnAppLaunchHookStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterOnAppLaunchHookEnd be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterPageOnLoadHookStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log after masterPageOnLoadHookEnd be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage log, will send stage log after masterActiveInitAction be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should clear performace log and change logOnNewScheme status after masterOnNewScheme be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while some error happened</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log master masterFePageShow</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and send msg after masterFePageShow be called</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log slave</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add and send stage info after slavePreloadEnd be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveJsParsed be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActivePageLoadStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveSwanJsLoadStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveCssLoaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf info after slaveActiveAppCssLoaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf info after slaveActivePageCssLoaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf info after slaveActiveSwanJsLoaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveRealGetData be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and send stage info after slaveActiveNoticeMasterSlaveloaded be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveReceiveInitData be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perf and stage info after slaveActiveRenderStart be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should send data to master immediately while ua match none</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should change __fpSend while ua match correctly</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should change __fpSend while ua match correctly but its __fpSend is true</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">slaveFeFirstPaint</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while some error happened</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log slave slaveFeFirstPaint</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should reset fpSend flag while it does not exist and eventId is not nreach</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should reset reportFPData flag while it does not exist</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log logEventsSpecialListener master</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should be caught while return parameter is empty</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should reset logMessageSended while return parameter type is sendLogMessage and sended</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should reset logMessageSended while return parameter type is sendLogMessage and never send</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log logEventsSpecialListener slave</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perfLogList while the dispatchEvent message is initData</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perfLogList while the dispatchEvent message is not initData</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add perfLogList while the dispatchEvent message is not initData and _naSwan is document</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log logEventsSpecialListener</span>
-    
-      <div class="specSummary passed">
-      <span class="description">sendDataToMaster</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log logEventsSpecialListener performance Log</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add action will be caught while log was not sent and log was repeat</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Log logEventsSpecialListener stageLog</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should add action will be caught while log was sent</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should add action will be caught while log was not sent but log was repeat</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should send action will be caught when log was sent</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">PerformanceLog</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should PerformanceLog is a class</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should return an object after addPerformPanel be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should return an object after performPanelHelper be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should call boxjs log right after sendLogMessage be called</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should call boxjs log right after sendFPLog be called</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">initProductLogEvents</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should initProductLogEvents is a function</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">initProductLogEvents</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should be return while the fireMessage event params does not exist</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Statistics</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should Statistics is a function</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should call boxjs log after sendStageMessage be called</span>
-      </div>
-    
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">Statistics customComponentStatistics</span>
-    
-      <div class="specSummary passed">
-      <span class="description">should call boxjs log after while this is customponent size statistics</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should call boxjs log after while this is statistics for page using customcomponent</span>
-      </div>
-    
       <div class="specSummary passed">
-      <span class="description">should be caught when some error happened</span>
+      <span class="description">btoa return expected value</span>
       </div>
     
     </div>
@@ -619,30 +142,21 @@ body { background-color: #eeeeee; padding: 0; margin: 5px; overflow-y: scroll; }
       <span class="description">getABTestValue</span>
       </div>
     
+      <div class="specSummary passed">
+      <span class="description">getABTestValue error in webview</span>
+      </div>
+    
     </div>
   
     <div class="suite passed">
-      <span class="description">utils in v8s</span>
+      <span class="description">utils in v8 environment</span>
     
       <div class="specSummary passed">
       <span class="description">getABTestValue in v8</span>
       </div>
     
-    </div>
-  
-    <div class="suite passed">
-      <span class="description">ExceptionMonitor can exceptionMonitor collect events after collectEvents be called</span>
-    
       <div class="specSummary passed">
-      <span class="description">should test stage does not exist in targetEvents</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should test stage is abnormal</span>
-      </div>
-    
-      <div class="specSummary passed">
-      <span class="description">should test stage is normal</span>
+      <span class="description">getABTestValue error in v8</span>
       </div>
     
     </div>
